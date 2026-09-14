@@ -1,0 +1,48 @@
+
+.body {
+    font-family: 'Times New Roman', Arial, sans-serif;
+}
+
+/* .classnavn */
+.boks1 {
+    /*background-color:rgba(95, 158, 160, 0.5);*/
+    background-color: #388248;
+    opacity:0.5;
+        /* Teksten blir mindre synlig, 
+        nesten som teksten mister fargen sin.
+        opacity gjør vel noe med hvor gjennomsiktig 
+        noe er */
+        a{
+        text-decoration: none;
+        }
+}
+.boks2 {
+    background-color: #a72727;
+    text-transform: uppercase;
+}
+.boks3 {
+    background-color: rgba(57, 147, 32, 0.5);
+    background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/960px-Steam_icon_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
+    background-size: contain;
+    /* Når jeg brukte cover så dekket hele bildet boksen,
+    imens når jeg brukte contain, så ble bildet mange små,
+    som passet perfekt i boksens størrelse. 
+    Altså mange små bilder i motsettning til 1 stort */
+}
+header {
+    h1 {
+        color:aqua;
+        font-size: 32px;
+        font-weight:bold;
+        text-align: center;
+    }
+    .p1 {
+        font-size: 1rem;
+    }
+    .p2 {
+        line-height: 1.6;
+    }
+    .p3 {
+       
+    }
+}
