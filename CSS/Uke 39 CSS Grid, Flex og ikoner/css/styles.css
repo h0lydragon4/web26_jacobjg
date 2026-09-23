@@ -13,7 +13,8 @@ body {
 
 #grid-container{
     display: grid;
-    grid-template-areas: "header" "nav" "main" "footer";
+    
+    grid-template-areas: "header" "nav" "main" "aside" "footer";
     gap: 1rem;
     max-width: 1200px;
     width: 100%;
@@ -25,7 +26,7 @@ img {
 }
 
 #logo{
-    max-width: 150px;
+    max-width: 70px;
 }
 
 header{
@@ -58,6 +59,8 @@ header{
     display: flex;
     list-style: none;
     gap: .2rem;
+    padding: 0;
+    font-size: 0.75rem;
 
     li{
         &::after{
@@ -66,6 +69,7 @@ header{
     }
 
     li:last-child{
+        font-weight: bold;
         &::after{
             content: "";
         }
@@ -76,23 +80,70 @@ main{
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
 }
 
-.left-content-container{
+.left-content-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+
+
+
+    img {
+        flex-basis: calc(1vw - 1rem);
+        width: 27%;
+    }
+
+    .active-img {
+        flex-basis: 100%;
+        width: 100%;
+    }
 }
 
-.left-content-container{
-    flex-basis: 31%;
-    width: 31%;
+.flex-items {
+    flexgrow: 1;
+    flex-shrink: 1;
+    flex-basis: 320px;
+    min-width: 0;
+    margin: 0;
 }
 
-/* Ble ikke ferdig med delen under */
-.active-img{
-    flex-basis: 100%;
-    width: 100%;
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media (min-width: 600px) {
+    #grid-container {
+        grid-template-columns: 2fr 2fr 1.25fr;
+        grid-template-areas: "header header header"
+                            "nav nav nav"
+                            "main main aside"
+                            "footer footer footer";
+    }
+    @logo {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    #grid-container {
+        grid-template-areas: "nav nav nav" "header header header" "aside main main" "footer footer footer";
+    }
+
+    body {
+        font-family: "Comic Sans MS";
+        color: green;
+
+    }
+
+    #logo {
+        max-width: 150px;
+    }
 }
