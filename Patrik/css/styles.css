@@ -23,62 +23,73 @@ body {
 
 #science {
 	background-color: hsl(0, 0%, 100%);
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
 }
 #animal {
 	background-color: hsl(337, 52%, 72%);
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
 }
 #tech {
 	background-color: hsl(204, 52%, 72%);
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
 }
 #culture {
 	background-color: hsl(271, 52%, 72%);
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
 }
 #history {
 	background-color: hsl(8, 52%, 72%);
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
 }
 #geo {
 	background-color: hsl(168, 52%, 72%);
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
 }
 #food {
 	background-color: hsl(30, 52%, 72%);
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
 }
 
-
-#grid-container{
+#grid-container {
     display: grid;
     grid-template-columns: 0.5fr 3fr 0.5fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 100hv;
+    height: 100vh;
 }
 
-header{
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
-
-    grid-template-columns: subgrid;
-   grid-template-rows: subgrid;
+    align-content: center;
+    
 }
 
 nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
-
 }
 
-main{
-    grid-area: main;
-    display: flex;
-   grid-column: 2 / 3;
-   grid-row: 2 / 3;
 
-   
+main {
+   display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Eksempel: 4 kolonner */
+  grid-template-rows: auto auto auto;    /* 3 rader */
+  gap: 20px;
 }
 
-footer{
-    display: flex;
+
+footer {
     grid-column: 1 / 4;
     grid-row: 4 / 4;
 }
+
