@@ -1,103 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="icons/css/all.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Produktside - Pink Runners</title>
-</head>
-<body>
-    <div id="grid-container">
-    
-        <header>
-            <form>
-                <input type="search">
-                <button type="submit">Search</button>
-            </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="icons/css/all.min.css" />
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Produktside - Pink Runners</title>
+    </head>
+    <body>
+        <div id="grid-container">
+            <header>
+                <form>
+                    <input type="search">
+                    <button type="submit">Search</button>
+                </form>
+                <img id="logo" src="img/logo.png" alt="logo for BTS">
 
-            <img id="logo" src="img/logo.png" alt="logo for BTS">
+                <section>
+                    <a href="#">Sign in
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="#">Shopping cart</a>
+                </section>
+             </header>
 
-            <section>
-                <a href="#">Sign in</a>
-                <a href="#">Shopping cart</a>
-            </section>
-    </header>
-
-     <nav id="global-navigation">
+    <nav id="global-navigation">
         <button id="ham"><i class="fa-solid fa-bars"></button>
-            <ul>
+            <ul id="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Men</a></li>
                 <li><a href="#">Women</a></li>
                 <li><a href="#">Children</a></li>
                 <li><a href="#">Special Offers</a></li>
+                <li>
+                    <button id="close-ham"><i class="fa-solid fa-xmark"></i></button>
+                </li>
+            </ul>
+    </nav>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Running Shoes</a></li>
+                <li><a href="#">Pink Runners</a></li>
             </ul>
         </nav>
+        
+        <!-- Bilde overskrift, beskrivelse, pris og knapp for å legge til handlekurv -->
+        <picture class="left-content-container flex-items">
+            <source media="(min-width: 600px)" srcset="img/pink-shoes-medium.jpeg" />
+            <source media="(min-width: 1200px)" srcset="img/pink-shoes-large.jpeg" />
 
-<main>
+            <img class="active-img" src="img/pink-shoes-small.jpeg" alt="Pink runners" />
+            <img src="img/pink-shoes.jpeg" alt="Pink runners" />
+            <img src="img/pink-shoes.jpeg" alt="Pink runners" />
+            <img src="img/pink-shoes.jpeg" alt="Pink runners" />
+        </picture>
 
-    <!-- Breadcrumbs -->
-     <nav id="breadcrumbs">
-        <ul>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Running Shoes</a></li>
-            <li><a href="#">Pink Runners</a></li>
-        </ul>
-     </nav>
-     
-    <!-- Bilde overskrift, beskrivelse, pris og knapp for å legge til handlekurv -->
-    <picture class="left-content-container flex-items">
-					<source media="(min-width: 600px)" srcset="img/pink-shoes-medium.jpeg" />
-					<source media="(min-width: 1200px)" srcset="img/pink-shoes-large.jpeg" />
+        <section class="right-content-container flex-items">
+            <span> SHUS </span>
+            <h1>Pink Runners</h1>
+            <span>1499 kr</span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error molestias nemo dolor libero dicta aut. Similique possimus soluta repudiandae, aperiam voluptatibus cupiditate tenetur harum quibusdam. Sequi accusamus doloremque pariatur.
+            </p>
 
-				<img class="active-img" src="img/pink-shoes-small.jpeg" alt="Pink runners" />
-					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
-					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
-					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
-    </picture>
+            <form>
+                <label for="size">Size</label>
+                    <!-- Sko størrelser under -->
+                    <select name="size" id="size">
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    </select>
+                <button>Add to cart</button>
+            </form>
+        </section>
+    </main>
 
-    <section class="right-content-container flex-items">
-        <span> SHUS </span>
-        <h1>Pink Runners</h1>
-        <span>1499 kr</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error molestias nemo dolor libero dicta aut. Similique possimus soluta repudiandae, aperiam voluptatibus cupiditate tenetur harum quibusdam. Sequi accusamus doloremque pariatur.
-        </p>
+    <aside>
+        <h3>More products like this</h3>
+    </aside>
 
-        <form>
-            <label for="size">Size</label>
-                <!-- Sko størrelser under -->
-                <select name="size" id="size">
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
-                <option value="37">37</option>
-                <option value="38">38</option>
-                <option value="39">39</option>
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-                <option value="47">47</option>
-                <option value="48">48</option>
-                </select>
-            <button>Add to cart</button>
-        </form>
-    </section>
-    
-    
-</main>
+        <footer>&copy; BUY THESE SHOES 2026</footer>
 
-<aside>
-    <h3>More products like this</h3>
-</aside>
-
-    <footer>&copy; BUY THESE SHOES 2026</footer>
-
-    </div>
-    <script src="js/script.js"></script>
-</body>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
 </html>
