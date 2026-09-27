@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icons/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Produktside - Pink Runners</title>
 </head>
@@ -24,6 +25,7 @@
     </header>
 
      <nav id="global-navigation">
+        <button id="ham"><i class="fa-solid fa-bars"></button>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Men</a></li>
@@ -45,15 +47,19 @@
      </nav>
      
     <!-- Bilde overskrift, beskrivelse, pris og knapp for å legge til handlekurv -->
-    <figure class="left-content-container flex-items">
-        <img class="active-img" src="img/pink-shoes.jpeg" alt="Pink Runners" />
-        <img src="img/pink-shoes.jpeg" alt="Pink Runners" />
-        <img src="img/pink-shoes.jpeg" alt="Pink Runners" />
-    </figure>
+    <picture class="left-content-container flex-items">
+					<source media="(min-width: 600px)" srcset="img/pink-shoes-medium.jpeg" />
+					<source media="(min-width: 1200px)" srcset="img/pink-shoes-large.jpeg" />
+
+				<img class="active-img" src="img/pink-shoes-small.jpeg" alt="Pink runners" />
+					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
+					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
+					<img src="img/pink-shoes.jpeg" alt="Pink runners" />
+    </picture>
 
     <section class="right-content-container flex-items">
         <span> SHUS </span>
-        <h3>Pink Runners</h3>
+        <h1>Pink Runners</h1>
         <span>1499 kr</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error molestias nemo dolor libero dicta aut. Similique possimus soluta repudiandae, aperiam voluptatibus cupiditate tenetur harum quibusdam. Sequi accusamus doloremque pariatur.
         </p>
@@ -92,5 +98,6 @@
     <footer>&copy; BUY THESE SHOES 2026</footer>
 
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
