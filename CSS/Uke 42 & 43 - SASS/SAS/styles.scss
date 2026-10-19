@@ -1,6 +1,6 @@
-@use "colors";
-@use "fonts";
-@use "spacing";
+@use "partials/colors";
+@use "partials/fonts";
+@use "partials/spacing";
 
 /* Extention */
 .flex-column{
@@ -8,6 +8,36 @@
 	flex-direction: column;
 }
 
+@mixin flex($display, $direction) {
+	display: $display;
+	flex-direction: $direction;
+}
+
+@mixin hero($bg, $color, $textalign: center, $padding: 3rem spacing.$spacing-medium) {
+	background-color: $bg;
+	color: $color;
+	text-align: $textalign;
+	padding: $padding;
+}
+
+@mixin spacing($margin: 0, $padding: 0) {
+	padding: $padding;
+	margin: $margin;
+}
+
+@mixin badge($content: "SKRIV NOE NYTTIG HER", $bg: #bf5f36, $text-color: white) {
+	content: $content;
+	position: absolute;
+	top: -0.6rem;
+	right: -0.06rem;
+	background-color: $bg;
+	color: $text-color;
+	font: 0.7rem;
+	font-weight: bold;
+	padding: 0.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* Grunnoppsett */
 
@@ -41,7 +71,7 @@ a {
 /* Toppheader */
 
 .toppheader {
-	@extend .flex-column;
+	@include flex(flex, column);
 	align-items: center;
 	gap: spacing.$spacing-small;
 	padding: spacing.$spacing-medium;
@@ -107,8 +137,7 @@ a {
 	justify-content: center;
 	gap: 0.5rem spacing.$spacing-medium;
 	list-style: none;
-	margin: 0;
-	padding: 0;
+	@include spacing();
 }
 
 .hovednav a {
@@ -120,10 +149,14 @@ a {
 /* Hero */
 
 .hero {
+	@include hero(red, white, center, 4rem)
+
+	/*
 	background-color: #2b2d42;
 	color: colors.$light-tekst;
 	text-align: center;
 	padding: 3rem spacing.$spacing-medium;
+	*/
 }
 
 .hero h1 {
@@ -140,7 +173,7 @@ a {
 .knapp {
 	display: inline-block;
 	background-color: #ef8354;
-	color: $light-tekst;
+	color: colors.$light-tekst;
 	text-decoration: none;
 	font-weight: bold;
 	padding: 0.85rem spacing.$spacing-large;
@@ -154,8 +187,9 @@ a {
 
 main {
 	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 spacing.$spacing-medium;
+	@include spacing(0 auto, 0 spacing.$spacing-medium)
+	//margin: 0 auto;
+	//padding: 0 spacing.$spacing-medium;
 }
 
 main section {
@@ -293,7 +327,7 @@ main h2 {
 }
 
 .sidefot h2 {
-	color: $light-tekst;
+	color: colors.$light-tekst;
 	font-size: 1.3rem;
 }
 
@@ -330,7 +364,7 @@ address {
 	margin-top: 1.25rem;
 	align-self: flex-start;
 	background-color: #ef8354;
-	color: $light-tekst;
+	color: colors.$light-tekst;
 	border: none;
 	padding: 0.75rem 1.75rem;
 	border-radius: 999px;
@@ -352,7 +386,7 @@ address {
 	.toppheader {
 		flex-direction: row;
 		justify-content: space-between;
-		padding: fonts.$font-medium $font-large;
+		padding: fonts.$font-medium fonts.$font-large;
 	}
 
 	.hovednav ul {
@@ -466,18 +500,12 @@ address {
 	background-color: #ece3dc;
 }
 
+.menyliste li:nth-child(2)::after {
+@include badge("POPULÆR", green)
+}
+
 .menyliste li:nth-child(4)::after {
-	content: "NY";
-	position: absolute;
-	top: -0.6rem;
-	right: -0.06rem;
-	background-color: #bf5f36;
-	color: white;
-	font: 0.7rem;
-	font-weight: bold;
-	padding: 0.5rem;
-	border-radius: 8px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+@include badge("NY", purple, yellow);
 }
 
 .om-oss p:first-of-type::first-letter {
