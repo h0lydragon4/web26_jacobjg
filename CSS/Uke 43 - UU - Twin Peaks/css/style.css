@@ -49,6 +49,11 @@ h4,
 .page-title,
 .card-title {
     font-family: var(--header-font);
+    color: var(--text);
+}
+
+h4:has(.card-title) {
+    margin-top: 0;
 }
 
 p,
@@ -106,14 +111,18 @@ a {
 }
 
 .menu-item {
-    font-size: 12px;
+    font-size: 1rem;
     color: #8fa596;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.menu-item.active {
+header nav a[aria-curent="page"] {
     color: #ff6b5b;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: bold;
+    
 }
 
 .footer a {

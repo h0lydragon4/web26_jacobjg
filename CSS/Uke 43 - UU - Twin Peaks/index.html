@@ -11,10 +11,10 @@
 
 
 	<header class="header">
-		<nav class="wrap header-inner">
+		<nav class="wrap header-inner" aria-label="hovedmeny">
 			<a class="logo" href="index.html">Twin Peaks</a>
 			<ul class="menu">
-				<li><a class="menu-item active" href="index.html">Forside</a></li>
+				<li><a class="menu-item" aria-curent="page" href="index.html">Forside</a></li>
 				<li><a class="menu-item" href="karakterer.html">Karakterer</a></li>
 				<li><a class="menu-item" href="sesonger.html">Sesonger</a></li>
 				<li><a class="menu-item" href="episoder.html">Episoder</a></li>
@@ -51,25 +51,31 @@
 
 			<h3>Utforsk</h3>
 			<aside class="cards">
-				<a class="card" href="karakterer.html">
-					<div class="card-title">Karakterer</div>
-					<p>Møt agent Cooper, sheriff Truman, Laura Palmer og de andre innbyggerne i Twin Peaks.</p>
-					<span class="read-more">Les mer →</span>
-				</a>
-				<a class="card" href="sesonger.html">
-					<div class="card-title">Sesonger</div>
-					<p>Fra den første sesongen i 1990 til The Return i 2017, og filmen imellom.</p>
-					<span class="read-more">Les mer →</span>
-				</a>
-				<a class="card" href="episoder.html">
-					<div class="card-title">Episoder</div>
-					<p>Alle 48 episodene med tittel, regissør og dato for første sending.</p>
-					<span class="read-more">Les mer →</span>
-				</a>
+				<article class="card">
+					<h4><a class="card-title" href="karakterer.html">Karakter</a></h4>
+						<p>
+							Møt agent Cooper, sheriff Truman, Laura Palmer og de andre innbyggerne i Twin Peaks.
+						</p>
+				</article>
+
+				<article class="card">
+				<h4><a class="card-title" href="sesonger.html">Sesonger</a></h4>
+					<p>
+						Fra den første sesongen i 1990 til The Return i 2017, og filmen imellom.
+					</p>
+				</article>
+
+				<article class="card">
+				<h4><a class="card-title" href="episoder.html">Episoder</a></h4>
+					<p>
+						Alle 48 episodene med tittel, regissør og dato for første sending.
+					</p>
+				</article>
 			</aside>
 		</section>
 	</main>
 
+	
 	<footer class="footer">
 		<div class="wrap">
 			<p>En uoffisiell fanside.</p>

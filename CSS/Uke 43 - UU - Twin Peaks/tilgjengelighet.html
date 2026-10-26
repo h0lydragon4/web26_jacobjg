@@ -8,14 +8,14 @@
 </head>
 <body>
 	<header class="header">
-		<nav class="wrap header-inner">
+		<nav class="wrap header-inner" aria-label="hovedmeny">
 			<a class="logo" href="index.html">Twin Peaks</a>
 			<ul class="menu">
 				<li><a class="menu-item" href="index.html">Forside</a></li>
 				<li><a class="menu-item" href="karakterer.html">Karakterer</a></li>
 				<li><a class="menu-item" href="sesonger.html">Sesonger</a></li>
 				<li><a class="menu-item" href="episoder.html">Episoder</a></li>
-				<li><a class="menu-item active" href="tilgjengelighet.html">Tilgjengelighet</a></li>
+				<li><a class="menu-item" aria-curent="page" href="tilgjengelighet.html">Tilgjengelighet</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -35,9 +35,11 @@
 			<h4>Meld fra om problemer</h4>
 			<p>Har du funnet noe som ikke fungerer? Gi beskjed i skjemaet. Felt med rød ramme må fylles ut.</p>
 
-			<div class="form">
-				<input type="text" placeholder="Navn">
-				<input type="text" class="required" placeholder="E-post">
+			<form class="form">
+				<input type="text" placeholder="Navn" />
+				<label for="email">Epost <span aria-hidden="true">*</span></label>
+				<input type="text" class="required" placeholder="E-post" />
+
 				<select>
 					<option>Hvilken side gjelder det?</option>
 					<option>Forside</option>
@@ -48,10 +50,10 @@
 				</select>
 				<textarea class="required" rows="5" placeholder="Hva er problemet?"></textarea>
 				<p>Vil du at vi svarer deg?</p>
-				<div><input type="radio" name="svar" checked> Ja, svar meg på e-post</div>
-				<div><input type="radio" name="svar"> Nei, det trengs ikke</div>
-				<div class="button">Send</div>
-			</div>
+				<label><input type="radio" name="svar" checked> Ja, svar meg på e-post</label>
+				<label><input type="radio" name="svar"> Nei, det trengs ikke</label>
+				<button class="button">Send</button>
+			</form>
 		</div>
 	</div>
 
