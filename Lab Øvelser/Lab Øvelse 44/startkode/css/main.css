@@ -220,7 +220,7 @@ nav ul span {
   margin: 0.5rem 0;
 }
 #news .scroll-container article ul li:first-child {
-  color: #a6a6a6;
+  color: #000000;
   text-transform: uppercase;
 }
 #news h2 {
