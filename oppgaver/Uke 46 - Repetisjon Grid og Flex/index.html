@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Oppgaver uke 46: flexbox og grid</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/oppgaver.css" />
+	</head>
+	<body>
+		<!-- OPPGAVE 1 -->
+		<header class="sidehode">
+			<a class="logo" href="index.html">GRID O<span>G FLEX</span></a>
+			<nav aria-label="Hovedmeny">
+				<ul>
+					<li><a href="#flex">Flexbox</a></li>
+					<li><a href="#grid">Grid</a></li>
+					<li><a href="#kontakt">Kontakt</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="intro">
+				<h1>Repetisjon av flexbox og grid</h1>
+				<p>HTML-en er ferdig. Du skriver all CSS i <code>css/oppgaver.css</code>.</p>
+			</section>
+
+			<h2 id="flex">Flexbox</h2>
+
+			<section class="demo" id="oppg-header">
+				<h2><span class="nummer">1</span>Headeren</h2>
+				<p>Headeren øverst på siden er bare stablet oppå hverandre nå. Fiks den med flex.</p>
+				<ul class="mal">
+					<li>Logoen skal ligge til venstre og menyen til høyre.</li>
+					<li>Logo og meny skal være sentrert loddrett i forhold til hverandre.</li>
+					<li>Menypunktene skal ligge på én rad, med litt luft mellom dem.</li>
+				</ul>
+
+				<div class="bonus">
+					<p>
+						<strong>Ekstra:</strong> Gjør vinduet veldig smalt. Hva skjer? Få menyen til å legge seg
+						under logoen når det ikke er plass.
+					</p>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-senter">
+				<h2><span class="nummer">2</span>Sentrering</h2>
+				<p>Bruk flexbox til å plassere boksen midt i lerretet, både vannrett og loddrett.</p>
+
+				<div class="lerret hoy">
+					<div class="boks">Plasser meg i midten</div>
+				</div>
+				<div class="bonus">
+					<p>
+						<strong>Ekstra:</strong> Kommenter ut flex-løsningen og gjør det samme med grid. Klarer
+						du det med to linjer?
+					</p>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-sok">
+				<h2><span class="nummer">3</span>Søkefeltet</h2>
+				<p>Et søkefelt som det du finner på de fleste nettsider.</p>
+				<ul class="mal">
+					<li>Ledetekst, søkefelt og knapp skal ligge på én rad, sentrert loddrett.</li>
+					<li>
+						Ledeteksten og knappen skal være så brede som innholdet. Søkefeltet skal fylle resten av
+						plassen.
+					</li>
+				</ul>
+				<p class="hint">
+					Tips: denne egenskapen skal på barnet (<code>input</code>), ikke på containeren.
+				</p>
+				<div class="lerret">
+					<form class="sok" action="#">
+						<label for="sok">Søk i emnet</label>
+						<input type="search" id="sok" name="sok" />
+						<button type="submit">Søk</button>
+					</form>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-kort">
+				<h2><span class="nummer">4</span>Responsive kort</h2>
+				<p>Kortene skal fordele seg på rader uten at du bruker media queries.</p>
+				<ul class="mal">
+					<li>Kortene skal ligge ved siden av hverandre med <code>1rem</code> mellomrom.</li>
+					<li>Hvert kort skal helst være ca. <code>250px</code>, men få vokse og krympe.</li>
+					<li>Når det ikke er plass, skal kortene bryte over på en ny rad.</li>
+				</ul>
+				<p class="hint">
+					Tips: <code>flex-wrap</code> på containeren og shorthanden <code>flex</code> på kortene.
+					Hva betyr de tre tallene i <code>flex</code>?
+				</p>
+				<div class="kortrad">
+					<article class="kort">
+						<h3>Studieplan</h3>
+						<p>Oversikt over temaene i emnet, fra HTML og CSS til universell utforming og SEO.</p>
+					</article>
+					<article class="kort">
+						<h3>Labøvelser</h3>
+						<p>Ukentlige øvelser der du får prøvd deg på det vi har gått gjennom i forelesning.</p>
+					</article>
+					<article class="kort">
+						<h3>Eksamen</h3>
+						<p>Praktisk informasjon om innlevering, vurdering og hva som er lurt å øve på.</p>
+					</article>
+					<article class="kort">
+						<h3>Kontakt oss</h3>
+						<p>Lurer du på noe? Bruk skjemaet nederst på siden, eller ta kontakt på lab.</p>
+					</article>
+				</div>
+			</section>
+
+			<h2 id="grid">Grid</h2>
+
+			<section class="demo" id="oppg-galleri">
+				<h2><span class="nummer">5</span>Galleri</h2>
+				<p>Løs oppgaven i to steg. La steg A stå som kommentar når du går videre til steg B.</p>
+				<ul class="mal">
+					<li>A: Tre like brede kolonner med <code>1rem</code> mellomrom.</li>
+					<li>
+						B: Så mange kolonner som får plass, der hver er minst
+						<code>180px</code>. Gjør vinduet smalere og bredere for å teste.
+					</li>
+				</ul>
+				<p class="hint">
+					Tips: <code>grid-template-columns</code>, <code>fr</code>, <code>repeat()</code>,
+					<code>auto-fit</code>, <code>minmax()</code>.
+				</p>
+				<div class="lerret galleri">
+					<div class="boks">1</div>
+					<div class="boks">2</div>
+					<div class="boks">3</div>
+					<div class="boks">4</div>
+					<div class="boks">5</div>
+					<div class="boks">6</div>
+					<div class="boks">7</div>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-mosaikk">
+				<h2><span class="nummer">6</span>Mosaikk</h2>
+				<p>Noen elementer skal ta opp mer plass enn andre.</p>
+				<ul class="mal">
+					<li>Fire like brede kolonner. Alle rader skal være <code>100px</code> høye.</li>
+					<li><code>.stor</code> skal spenne over 2 kolonner og 2 rader.</li>
+					<li><code>.bred</code> skal spenne over 2 kolonner.</li>
+					<li><code>.hoy</code> skal spenne over 2 rader.</li>
+					<li><code>.hele</code> skal gå fra første til siste kolonnelinje.</li>
+				</ul>
+				<p class="hint">
+					Tips: <code>grid-auto-rows</code>, <code>grid-column</code>, <code>grid-row</code>,
+					<code>span</code>, <code>-1</code>.
+				</p>
+				<div class="lerret mosaikk">
+					<div class="boks stor">1<small>.stor</small></div>
+					<div class="boks">2</div>
+					<div class="boks bred">3<small>.bred</small></div>
+					<div class="boks hoy">4<small>.hoy</small></div>
+					<div class="boks">5</div>
+					<div class="boks">6</div>
+					<div class="boks">7</div>
+					<div class="boks hele">8<small>.hele</small></div>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-sidelayout">
+				<h2><span class="nummer">7</span>Sidelayout med navngitte områder</h2>
+				<p>Lerretet under er en nettside i miniatyr, med fast høyde.</p>
+				<ul class="mal">
+					<li>Header øverst og footer nederst, begge over hele bredden.</li>
+					<li>Menyen til venstre (<code>200px</code> bred), innholdet til høyre (resten).</li>
+					<li>
+						Header og footer skal være så høye som innholdet sitt. Innholdsfeltet skal fylle resten
+						av høyden, slik at footeren alltid ligger nederst.
+					</li>
+					<li>
+						Under <code>600px</code> skal alt ligge i én kolonne: header, innhold, meny, footer.
+					</li>
+				</ul>
+				<p class="hint">
+					Tips: <code>grid-template-areas</code>, <code>grid-area</code>,
+					<code>grid-template-rows: auto 1fr auto</code>, <code>@media</code>.
+				</p>
+				<div class="lerret miniside">
+					<div class="boks a-header">header</div>
+					<div class="boks a-meny">meny</div>
+					<div class="boks a-innhold">innhold</div>
+					<div class="boks a-footer">footer</div>
+				</div>
+				<div class="bonus">
+					<p>
+						<strong>Ekstra:</strong> Flytt menyen over til høyre. Du får bare endre
+						<code>grid-template-areas</code> og kolonnene, ikke HTML-en.
+					</p>
+				</div>
+			</section>
+
+			<section class="demo" id="oppg-footer">
+				<h2><span class="nummer">8</span>Footeren og skjemaet</h2>
+				<p>Denne gjelder footeren helt nederst på siden.</p>
+				<ul class="mal">
+					<li>
+						Kontaktinfo og skjema skal ligge ved siden av hverandre, og legge seg under hverandre
+						når hver del blir smalere enn ca. <code>300px</code>.
+					</li>
+					<li>Skjemafeltene skal ha <code>1rem</code> mellomrom.</li>
+					<li>Send-knappen skal ikke strekkes ut over hele bredden.</li>
+				</ul>
+				<p class="hint">Den første delen har du egentlig løst allerede, i oppgave 5.</p>
+			</section>
+		</main>
+
+		<!-- OPPGAVE 8 -->
+		<footer class="sidefot" id="kontakt">
+			<div class="innhold">
+				<section>
+					<h2>Kontakt</h2>
+					<p>Webutvikling 2026</p>
+					<p><a href="mailto:thoraho@hiof.no">thoraho@hiof.no</a></p>
+				</section>
+				<form class="skjema" action="#">
+					<div>
+						<label for="navn">Navn</label>
+						<input type="text" id="navn" name="navn" autocomplete="name" />
+					</div>
+					<div>
+						<label for="epost">E-post</label>
+						<input type="email" id="epost" name="epost" autocomplete="email" />
+					</div>
+					<div>
+						<label for="melding">Melding</label>
+						<textarea id="melding" name="melding"></textarea>
+					</div>
+					<button type="submit">Send</button>
+				</form>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,362 @@
+/* Utseende for oppgavesiden. Ikke endre denne fila,
+   all layout skriver du i oppgaver.css. */
+
+:root {
+	--skog: #23412b;
+	--skog-lys: #3b6b45;
+	--gull: #c9971c;
+	--gull-mork: #7d5c00;
+	--papir: #f4efe2;
+	--papir-mork: #e9e1cc;
+	--hvit: #fffdf7;
+	--blekk: #29251c;
+	--blekk-lys: #635a48;
+	--linje: #d6cbb0;
+
+	--boks-1: #a8433a;
+	--boks-2: #d9a92e;
+	--boks-3: #4a7a3d;
+	--boks-4: #2f5f8f;
+	--boks-5: #5e4a78;
+	--boks-6: #a8cfe0;
+
+	--serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+	--sans: system-ui, "Segoe UI", Arial, sans-serif;
+	--mono: ui-monospace, Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: var(--serif);
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: var(--papir);
+	color: var(--blekk);
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+a {
+	color: var(--skog-lys);
+}
+
+code {
+	font-family: var(--mono);
+	font-size: 0.88em;
+	color: var(--skog);
+}
+
+/* Header */
+
+.sidehode {
+	background-color: var(--skog);
+	color: var(--papir);
+	padding: 0.9rem 1.5rem;
+	font-family: var(--sans);
+
+	.logo {
+		font-family: var(--serif);
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		color: var(--papir);
+		text-decoration: none;
+
+		span {
+			color: var(--gull);
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	nav a {
+		color: var(--papir);
+		text-decoration: none;
+		font-size: 0.95rem;
+		padding: 0.25rem 0.5rem;
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.3em;
+		}
+	}
+}
+
+/* Hovedinnhold */
+
+main {
+	width: min(920px, 100% - 2rem);
+	margin: 0 auto;
+	padding: 2.5rem 0 4rem;
+}
+
+.intro {
+	h1 {
+		font-size: clamp(1.9rem, 4vw, 2.6rem);
+		margin: 0 0 0.5rem;
+	}
+
+	p {
+		margin: 0;
+		color: var(--blekk-lys);
+		max-width: 60ch;
+	}
+}
+
+main > h2 {
+	font-size: 1.6rem;
+	margin: 3rem 0 0;
+	padding-bottom: 0.4rem;
+	border-bottom: 2px solid var(--skog);
+	color: var(--skog);
+}
+
+/* Én oppgave */
+
+.demo {
+	padding: 1.75rem 0 2rem;
+	border-bottom: 1px solid var(--linje);
+
+	h2 {
+		font-size: 1.3rem;
+		margin: 0 0 0.5rem;
+	}
+
+	.nummer {
+		color: var(--gull-mork);
+		margin-right: 0.4rem;
+
+		&::after {
+			content: ".";
+		}
+	}
+
+	> p {
+		margin: 0 0 0.5rem;
+		max-width: 65ch;
+	}
+}
+
+.mal {
+	margin: 0.5rem 0;
+	padding-left: 1.2rem;
+	max-width: 65ch;
+
+	li {
+		margin-bottom: 0.2rem;
+	}
+}
+
+.hint {
+	font-style: italic;
+	color: var(--blekk-lys);
+}
+
+.bonus {
+	margin-top: 1rem;
+	max-width: 65ch;
+	color: var(--blekk-lys);
+
+	p {
+		margin: 0;
+	}
+
+	strong {
+		color: var(--blekk);
+	}
+}
+
+/* Arbeidsflaten i hver oppgave */
+
+.lerret {
+	background-color: var(--papir-mork);
+	border: 1px solid var(--linje);
+	border-radius: 3px;
+	padding: 0.75rem;
+	margin-top: 1rem;
+}
+
+.lerret.hoy {
+	min-height: 220px;
+}
+
+.lerret.miniside {
+	height: 420px;
+}
+
+.boks {
+	font-family: var(--sans);
+	font-size: 0.95rem;
+	font-weight: 600;
+	text-align: center;
+	color: var(--hvit);
+	background-color: var(--boks-1);
+	border-radius: 2px;
+	padding: 0.9rem;
+	min-width: 3.5rem;
+
+	&:nth-child(6n + 2) {
+		background-color: var(--boks-2);
+		color: var(--blekk);
+	}
+	&:nth-child(6n + 3) {
+		background-color: var(--boks-3);
+	}
+	&:nth-child(6n + 4) {
+		background-color: var(--boks-4);
+	}
+	&:nth-child(6n + 5) {
+		background-color: var(--boks-5);
+	}
+	&:nth-child(6n + 6) {
+		background-color: var(--boks-6);
+		color: var(--blekk);
+	}
+
+	small {
+		display: block;
+		font-family: var(--mono);
+		font-weight: 400;
+		font-size: 0.8rem;
+		opacity: 0.85;
+	}
+}
+
+/* Kortene i oppgave 4 */
+
+.kort {
+	background-color: var(--hvit);
+	border: 1px solid var(--linje);
+	border-radius: 3px;
+	padding: 1rem 1.25rem;
+
+	h3 {
+		margin: 0 0 0.4rem;
+		font-size: 1.1rem;
+	}
+
+	p {
+		margin: 0;
+		font-size: 0.97rem;
+	}
+}
+
+/* Søkefeltet i oppgave 3 */
+
+.sok {
+	font-family: var(--sans);
+
+	label {
+		font-weight: 600;
+	}
+
+	input {
+		font: inherit;
+		padding: 0.45rem 0.6rem;
+		border: 1px solid #b9ac8c;
+		border-radius: 2px;
+		background-color: var(--hvit);
+		min-width: 0;
+	}
+
+	button {
+		font: inherit;
+		font-weight: 600;
+		background-color: var(--skog);
+		color: var(--papir);
+		border: none;
+		border-radius: 2px;
+		padding: 0.45rem 1.1rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--skog-lys);
+		}
+	}
+}
+
+/* Footer */
+
+.sidefot {
+	background-color: var(--skog);
+	color: var(--papir);
+	padding: 2.5rem 1.5rem;
+
+	h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	p {
+		margin: 0.2rem 0;
+	}
+
+	a {
+		color: var(--boks-6);
+	}
+}
+
+.skjema {
+	font-family: var(--sans);
+
+	label {
+		display: block;
+		font-size: 0.9rem;
+		margin-bottom: 0.2rem;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		font: inherit;
+		padding: 0.45rem 0.6rem;
+		border: 1px solid transparent;
+		border-radius: 2px;
+		background-color: var(--hvit);
+		color: var(--blekk);
+	}
+
+	textarea {
+		min-height: 6rem;
+		resize: vertical;
+	}
+
+	button {
+		font: inherit;
+		font-weight: 600;
+		background-color: var(--gull);
+		color: var(--blekk);
+		border: none;
+		border-radius: 2px;
+		padding: 0.5rem 1.4rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #ddb03a;
+		}
+	}
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid var(--gull);
+	outline-offset: 2px;
+}
